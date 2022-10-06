@@ -1,0 +1,82 @@
+export interface Button {
+    name:string;
+    type:string
+}
+
+const Buttons:Button[]=[
+    {
+        name:'7',
+        type:'number',
+    },
+    {
+        name:'8',
+        type:'number',
+    },
+    {
+        name:'9',
+        type:'number',
+    },
+    {
+        name:'DEL',
+        type:'symbol',
+    },
+    {
+        name:'4',
+        type:'number',
+    },
+    {
+        name:'5',
+        type:'number',
+    },
+    {
+        name:'6',
+        type:'number',
+    },
+    {
+        name:'+',
+        type:'symbol',
+    },
+    {
+        name:'1',
+        type:'number',
+    },
+    {
+        name:'2',
+        type:'number',
+    },
+    {
+        name:'3',
+        type:'number',
+    },
+    {
+        name:'-',
+        type:'symbol',
+    },
+    {
+        name:'.',
+        type:'dot',
+    },
+    {
+        name:'0',
+        type:'number',
+    },
+    {
+        name:'/',
+        type:'symbol',
+    },
+    {
+        name:'x',
+        type:'symbol',
+    },
+    {
+        name:'RESET',
+        type:'symbol',
+    },
+    {
+        name:'=',
+        type:'symbol',
+    },
+    
+]
+
+export default Buttons
