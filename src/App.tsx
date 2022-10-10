@@ -6,6 +6,7 @@ import { useState, useRef } from 'react';
 function App() {
  const [state, setState]=useState<{inputs:string[];operator:string;id:number}>({inputs:['0','0'],operator:'',id:0})
  const [screenValue, setScrenValue]=useState<string>('0') 
+ const [switchIndex, setSwitchIndex]=useState<number>(0)
  const [id, setId]=useState<number>(0) 
  const idRef=useRef(0)
 
@@ -16,11 +17,11 @@ function App() {
 
 }
   return (
-    <div className=' bg-theme-1-toggle-bg w-full flex justify-center min-h-[100vh]  items-center'>
-      <div className='max-w-[90%] md:max-w-[60%] lmd:max-w-[30%] mx-auto grid grid-rows-layout gap-5 '>
-     <Head/>
-     <Screen idRef={idRef} setId={setId} screenValue={screenValue} setScreenValue={setScrenValue} setState={setState} state={state} inputs={state.inputs} operator={state.operator} />
-     <Button idRef={idRef} setId={setId} screenValue={screenValue} setScreenValue={setScrenValue} setState={setState} state={state} inputs={state.inputs} operator={state.operator}/>
+    <div className={`${switchIndex ===0 && "bg-theme-1-toggle-bg"} ${switchIndex ===1 && "bg-theme-2-main-bg"} ${switchIndex ===2 && 'bg-theme-3-main-bg'} w-full flex justify-center min-h-[100vh]  items-center`}>
+      <div className='max-w-[90%] md:max-w-[45%] xsm:max-w-[60%] lmd:max-w-[30%] lg:max-w-[35%] xl:max-w-[25%] mx-auto grid grid-rows-layout gap-5 '>
+     <Head switchIndex={switchIndex} setSwitchIndex={setSwitchIndex}/>
+     <Screen switchIndex={switchIndex} setSwitchIndex={setSwitchIndex} idRef={idRef} setId={setId} screenValue={screenValue} setScreenValue={setScrenValue} setState={setState} state={state} inputs={state.inputs} operator={state.operator} />
+     <Button switchIndex={switchIndex} setSwitchIndex={setSwitchIndex} idRef={idRef} setId={setId} screenValue={screenValue} setScreenValue={setScrenValue} setState={setState} state={state} inputs={state.inputs} operator={state.operator}/>
      </div>
     </div>
      

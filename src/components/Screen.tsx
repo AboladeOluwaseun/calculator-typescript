@@ -11,14 +11,16 @@ export interface Props {
    state:{inputs:string[];operator:string;id:number}
    screenValue:string
    setScreenValue:Dispatcher<string>
+   switchIndex:number
+    setSwitchIndex:Dispatcher<number>
    
 }
 
-const Screen = ({inputs, operator, idRef, screenValue}: Props) => {
+const Screen = ({inputs, operator, idRef, screenValue, switchIndex, setSwitchIndex }: Props) => {
     
     return (
         <>
-           <div className=' bg-theme-1-main-bg rounded-lg px-3 relative text-white text-[2rem] flex justify-center items-center'>
+           <div className={` bg-theme-1-main-bg ${switchIndex===1 && 'bg-theme-2-scr-bg'} ${switchIndex===2 && 'bg-theme-3-scr-bg'} rounded-lg px-3 relative text-white text-[2rem] ${switchIndex===1 && 'text-theme-2-text'} ${switchIndex===2 && 'text-theme-3-text-yellow'} flex justify-center items-center`}>
                <p className='absolute right-2 '>{screenValue}</p> 
             </div> 
         </>
