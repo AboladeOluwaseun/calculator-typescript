@@ -1,4 +1,4 @@
-import React, {  useState, Dispatch, SetStateAction } from 'react'
+import React, {  Dispatch, SetStateAction } from 'react'
 type Dispatcher<S> = Dispatch<SetStateAction<S>>;
 interface Props {
     switchIndex:number
