@@ -18,7 +18,7 @@ const Buttons:Button[]=[
     },
     {
         name:'DEL',
-        type:'symbol',
+        type:'del',
     },
     {
         name:'4',
@@ -70,11 +70,11 @@ const Buttons:Button[]=[
     },
     {
         name:'RESET',
-        type:'symbol',
+        type:'reset',
     },
     {
         name:'=',
-        type:'symbol',
+        type:'equal',
     },
     
 ]
